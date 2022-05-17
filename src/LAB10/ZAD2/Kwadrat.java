@@ -3,11 +3,7 @@ package LAB10.ZAD2;
 public class Kwadrat implements Figura{
     double a;
 
-    public double getA() {
-        return a;
-    }
-
-    public void setA(int a) {
+    public Kwadrat(double a) {
         this.a = a;
     }
 
