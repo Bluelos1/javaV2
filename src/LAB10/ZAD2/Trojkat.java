@@ -1,6 +1,6 @@
 package LAB10.ZAD2;
 
-public class Trojkat implements Figura, Comparable{
+public class Trojkat implements Figura, Comparable<Figura>{
     double a;
     double b;
     double c;
@@ -25,8 +25,12 @@ public class Trojkat implements Figura, Comparable{
         return a+b+c;
     }
 
+
     @Override
-    public int compareTo(Object o) {
-        return 0;
+    public int compareTo(Figura o) {
+        return Double.compare(obliczPole(),o.obliczPole());
+    }
+    public String toString() {
+        return "pole:"+obliczPole();
     }
 }

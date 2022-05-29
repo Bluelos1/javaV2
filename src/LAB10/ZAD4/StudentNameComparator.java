@@ -1,4 +1,4 @@
-package LAB10.ZAD3;
+package LAB10.ZAD4;
 
 import java.util.Comparator;
 

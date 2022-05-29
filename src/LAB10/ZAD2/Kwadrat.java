@@ -1,7 +1,8 @@
 package LAB10.ZAD2;
 
-public class Kwadrat implements Figura, Comparable{
+public class Kwadrat implements Figura, Comparable<Figura>{
     double a;
+
 
     public Kwadrat(double a) {
         this.a = a;
@@ -17,9 +18,14 @@ public class Kwadrat implements Figura, Comparable{
         return a*4;
     }
 
+
     @Override
-    public int compareTo(Object o) {
-        Kwadrat that =(Kwadrat) o;
-        return compareTo(that.obliczPole());
+    public String toString() {
+        return "pole:"+obliczPole();
+    }
+
+    @Override
+    public int compareTo(Figura o) {
+        return Double.compare(obliczPole(),o.obliczPole());
     }
 }

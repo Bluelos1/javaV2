@@ -1,4 +1,4 @@
-package LAB10.ZAD3;
+package LAB10.ZAD4;
 
 public class Student {
     String imie;
@@ -9,6 +9,15 @@ public class Student {
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.indeks = indeks;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "imie='" + imie + '\'' +
+                ", nazwisko='" + nazwisko + '\'' +
+                ", indeks='" + indeks + '\'' +
+                '}';
     }
 
     public String getImie() {

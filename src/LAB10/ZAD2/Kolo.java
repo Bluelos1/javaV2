@@ -2,7 +2,7 @@ package LAB10.ZAD2;
 
 import java.util.Arrays;
 
-public class Kolo implements Figura, Comparable{
+public class Kolo implements Figura, Comparable<Figura>{
     int r;
 
     public Kolo(int r) {
@@ -19,9 +19,13 @@ public class Kolo implements Figura, Comparable{
         return 2*Math.PI*r;
     }
 
+
+    public String toString() {
+        return "pole:"+obliczPole();
+    }
+
     @Override
-    public int compareTo(Object o) {
-        Kolo that = (Kolo) o;
-        return compareTo(obliczPole());
+    public int compareTo(Figura o) {
+        return Double.compare(obliczPole(),o.obliczPole());
     }
 }
